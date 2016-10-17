@@ -1,6 +1,8 @@
 package com.example.activitytest;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +28,21 @@ public class FirstActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				Toast.makeText(FirstActivity.this, "you clicked Button 1", Toast.LENGTH_LONG).show();
+				//在活动内销毁活动
+				//finish();
+				//1、显示Intent
+//				Intent intent =new Intent(FirstActivity.this,SecondActivity.class);
+//				startActivity(intent);
 				
+				//2、隐式Intent
+//				Intent intent =new Intent("com.example.activity.activitytest.ACTION_START");
+//				intent.addCategory("com.example.activity.activitytest.MY_CATEGORY");
+//				startActivity(intent);
+				
+				//3、更多隐式Intent的用法
+				Intent intent=new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse("http://www.baidu.com"));
+				startActivity(intent);
 			}
 		});
 	}

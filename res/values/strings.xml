@@ -4,5 +4,6 @@
     <string name="button_name">Button1</string>
     <string name="Add">Add</string>
     <string name="Remove">Remove</string>
-    
+     <string name="button2_name">Button 2</string>
+      <string name="button3_name">Button 3</string>
 </resources>
